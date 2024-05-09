@@ -12,17 +12,18 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        >
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="@drawable/ic_background"
             android:elevation="4dp"
             android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-            app:title="@string/aggPet"
-            app:titleTextColor="@android:color/white" />
+            app:title="Añadir Mascota"
+            app:titleTextColor="@android:color/black" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -44,6 +45,8 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="@string/nombreMascota"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
                 android:textSize="28sp"
                 android:inputType="text" />
 
@@ -53,6 +56,8 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="@string/tipoMascota"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
                 android:textSize="28sp"
                 android:inputType="text"
                 android:layout_marginTop="20dp"
@@ -65,6 +70,8 @@
                 android:layout_marginTop="20dp"
                 android:ems="10"
                 android:hint="@string/edadMascota"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
                 android:textSize="28sp"
                 android:inputType="text" />
 
@@ -76,6 +83,8 @@
                 android:ems="10"
                 android:textSize="28sp"
                 android:hint="@string/colorMascota"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
                 android:inputType="text" />
 
             <EditText
@@ -86,6 +95,8 @@
                 android:ems="10"
                 android:textSize="28sp"
                 android:hint="@string/saludMascota"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
                 android:inputType="text" />
 
             <Button
@@ -94,7 +105,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/aggMascota"
                 android:textSize="28sp"
-                android:backgroundTint="@color/salmon"
+                android:backgroundTint="@color/botong"
                 android:layout_marginTop="36dp" />
         </LinearLayout>
 

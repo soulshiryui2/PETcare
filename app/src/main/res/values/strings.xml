@@ -3,6 +3,7 @@
     <!-- TODO: Remove or change this placeholder text -->
 
     <string name="iniciarSesion">Iniciar sesión</string>
+    <string name="descripcion">PetCare, cuidandolos por ti.</string>
     <string name="cerrarSesion">Cerrar sesión</string>
 
     <string name="nombreUsuario">Nombre usuario</string>

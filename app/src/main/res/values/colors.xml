@@ -25,7 +25,7 @@
     <color name="gris">#C4CDCA</color>
     <color name="pink">#F4C7B4</color>
     <color name="salmon">#FEAA85</color>
-
+    <color name="botong">#555555</color>
     <color name="buttonLoginColor">#1976D2</color> <!-- Azul oscuro -->
     <color name="buttonRegisterColor">#FFEB3B</color> <!-- Amarillo -->
 </resources>
