@@ -7,8 +7,10 @@
 
     <string name="nombreUsuario">Nombre usuario</string>
     <string name="nombreMascota">Nombre mascota</string>
+    <string name="tipoMascota">Tipo de mascota</string>
     <string name="edadMascota">Edad mascota</string>
     <string name="colorMascota">Color mascota</string>
+    <string name="saludMascota">Salud</string>
     <string name="creacionMascota">Creación de mascota</string>
     <string name="aggPet">Añadir Pet</string>
 

@@ -30,6 +30,8 @@ class CreatePetActivity : AppCompatActivity() {
     private lateinit var name: EditText
     private lateinit var edad: EditText
     private lateinit var color: EditText
+    private lateinit var tipo: EditText
+    private lateinit var salud: EditText
     private lateinit var precio_vacuna: EditText
     private lateinit var mfirestore: FirebaseFirestore
     private lateinit var mAuth: FirebaseAuth
@@ -59,8 +61,10 @@ class CreatePetActivity : AppCompatActivity() {
 
         linearLayout_image_btn = findViewById(R.id.images_btn)
         name = findViewById(R.id.nombre)
+        tipo = findViewById(R.id.tipo)
         edad = findViewById(R.id.edad)
         color = findViewById(R.id.color)
+        salud = findViewById(R.id.salud)
         photo_pet = findViewById(R.id.pet_photo)
         btn_cu_photo = findViewById(R.id.btn_photo)
         btn_r_photo = findViewById(R.id.btn_remove_photo)
@@ -80,14 +84,16 @@ class CreatePetActivity : AppCompatActivity() {
             linearLayout_image_btn.visibility = View.GONE
             btn_add.setOnClickListener {
                 val namepet = name.text.toString().trim()
+                val tipopet = tipo.text.toString().trim()
                 val edadpet = edad.text.toString().trim()
                 val colorpet = color.text.toString().trim()
+                val saludpet = salud.text.toString().trim()
 
                 if (namepet.isEmpty() && edadpet.isEmpty() && colorpet.isEmpty()) {
                     Toast.makeText(applicationContext, "Ingresar los datos", Toast.LENGTH_SHORT)
                         .show()
                 } else {
-                    postPet(namepet, edadpet, colorpet)
+                    postPet(namepet, tipopet, edadpet, colorpet, saludpet)
                 }
             }
         } else {
@@ -96,14 +102,16 @@ class CreatePetActivity : AppCompatActivity() {
           /*  getPet(id)*/
             btn_add.setOnClickListener {
                 val namepet = name.text.toString().trim()
+                val tipopet = tipo.text.toString().trim()
                 val edadpet = edad.text.toString().trim()
                 val colorpet = color.text.toString().trim()
+                val saludpet = salud.text.toString().trim()
 
                 if (namepet.isEmpty() && edadpet.isEmpty() && colorpet.isEmpty()) {
                     Toast.makeText(applicationContext, "Ingresar los datos", Toast.LENGTH_SHORT)
                         .show()
                 } else {
-                    updatePet(namepet, edadpet, colorpet, id)
+                    updatePet(namepet, tipopet, edadpet, colorpet, saludpet, id)
                 }
             }
         }
@@ -148,8 +156,10 @@ class CreatePetActivity : AppCompatActivity() {
 
   private fun postPet(
         namepet: String,
+        tipopet: String,
         edadpet: String,
         colorpet: String,
+        saludpet: String,
     ) {
         val idUser = mAuth.currentUser!!.uid
         val id = mfirestore.collection("pet").document()
@@ -157,8 +167,10 @@ class CreatePetActivity : AppCompatActivity() {
         map["id_user"] = idUser
         map["id"] = id.id
         map["name"] = namepet
+        map["tipo"] = tipopet
         map["edad"] = edadpet
         map["color"] = colorpet
+        map["salud"] = saludpet
         mfirestore.collection("pet").document(id.id).set(map).addOnSuccessListener {
             Toast.makeText(applicationContext, "Creado exitosamente", Toast.LENGTH_SHORT).show()
             finish()
@@ -204,14 +216,18 @@ class CreatePetActivity : AppCompatActivity() {
 */
     private fun updatePet(
         namepet: String,
+        tipopet: String,
         edadpet: String,
         colorpet: String,
+        saludpet: String,
         id: String
     ) {
         val map: MutableMap<String, Any> = HashMap()
         map["name"] = namepet
+        map["tipo"] = tipopet
         map["edad"] = edadpet
         map["color"] = colorpet
+        map["salud"] = saludpet
         mfirestore.collection("pet").document(id).update(map).addOnSuccessListener {
             Toast.makeText(applicationContext, "Actualizado exitosamente", Toast.LENGTH_SHORT)
                 .show()

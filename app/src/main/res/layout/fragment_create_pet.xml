@@ -48,6 +48,17 @@
                 android:inputType="text" />
 
             <EditText
+                android:id="@+id/tipo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/tipoMascota"
+                android:textSize="28sp"
+                android:inputType="text"
+                android:layout_marginTop="20dp"
+                />
+
+            <EditText
                 android:id="@+id/edad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -67,6 +78,16 @@
                 android:hint="@string/colorMascota"
                 android:inputType="text" />
 
+            <EditText
+                android:id="@+id/salud"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:textSize="28sp"
+                android:hint="@string/saludMascota"
+                android:inputType="text" />
+
             <Button
                 android:id="@+id/btn_add_CP"
                 android:layout_width="match_parent"
@@ -74,7 +95,7 @@
                 android:text="@string/aggMascota"
                 android:textSize="28sp"
                 android:backgroundTint="@color/salmon"
-                android:layout_marginTop="76dp" />
+                android:layout_marginTop="36dp" />
         </LinearLayout>
 
     </LinearLayout>
