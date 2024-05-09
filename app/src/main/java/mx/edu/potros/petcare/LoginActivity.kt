@@ -9,7 +9,6 @@ import android.widget.Toast
 import android.content.Intent
 class LoginActivity : AppCompatActivity() {
 
-
     private lateinit var btn_login: Button
     private lateinit var btn_register: Button
     private lateinit var btn_login_anonymous: Button
@@ -22,11 +21,10 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
         mAuth = FirebaseAuth.getInstance()
 
-        email=findViewById(R.id.correo)
-        password=findViewById(R.id.contrasena)
-        btn_login=findViewById(R.id.btn_login)
-
-
+        email = findViewById(R.id.correo)
+        password = findViewById(R.id.contrasena)
+        btn_login = findViewById(R.id.btn_login)
+        btn_register = findViewById(R.id.btn_register) // Inicializa el botón de registro
 
         btn_login.setOnClickListener {
             val emailUser = email.text.toString().trim()
@@ -42,8 +40,6 @@ class LoginActivity : AppCompatActivity() {
         btn_register.setOnClickListener {
             startActivity(Intent(this@LoginActivity, RegisterActivity::class.java))
         }
-
-
     }
 
 

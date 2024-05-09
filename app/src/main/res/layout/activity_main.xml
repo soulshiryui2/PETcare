@@ -4,19 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="PETcare"
-        android:textSize="24sp"
+        android:text="@string/app_name"
+        android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"/>
+        android:textColor="@color/black"
+        android:layout_marginTop="30dp"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -26,33 +28,56 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-
-        <Button
-            android:id="@+id/btn_close"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="cerrar sesion" />
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="45dp"
+            >
 
-        <Button
-            android:id="@+id/btn_add"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Agregar Mascota" />
+            <Button
+                android:id="@+id/btn_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/salmon"
+                android:textSize="20sp"
+                android:text="@string/aggMascota"
+                android:textColor="@color/black"/>
 
-        <!-- Agrega más vistas dentro de este LinearLayout si lo necesitas -->
+            <Button
+                android:id="@+id/btn_add_frag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/agg"
+                android:backgroundTint="@color/pink"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                />
 
-        <Button
-            android:id="@+id/btn_add_frag"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="agregarconfragment"
-            tools:layout_editor_absoluteX="121dp"
-            tools:layout_editor_absoluteY="58dp" />
+        </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/RecyclerViewSingle"
             android:layout_width="409dp"
-            android:layout_height="585dp" />
+            android:layout_height="385dp"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            />
+
+        <Button
+            android:id="@+id/btn_close"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/cerrarSesion"
+            android:textSize="20sp"
+            android:backgroundTint="@color/verdeGris"
+            android:textColor="@color/white"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp"
+            android:layout_gravity="center_horizontal"
+            />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

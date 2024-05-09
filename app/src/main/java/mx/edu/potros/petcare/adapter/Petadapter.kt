@@ -65,7 +65,7 @@ class PetAdapter(options: FirestoreRecyclerOptions<Pet>, private val activity: A
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val name: TextView = itemView.findViewById(R.id.nombre)
         val age: TextView = itemView.findViewById(R.id.edad)
-        val color: TextView = itemView.findViewById(R.id.edad)
+        val color: TextView = itemView.findViewById(R.id.color)
         val btn_delete: ImageView = itemView.findViewById(R.id.btn_eliminar)
        val btn_edit: ImageView=itemView.findViewById(R.id.btn_editar)
     }

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/azulGris"
     tools:context=".LoginActivity">
 
     <androidx.cardview.widget.CardView
@@ -16,21 +17,25 @@
         app:cardCornerRadius="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="600dp"
             android:orientation="vertical"
-            android:padding="10dp">
+            android:padding="10dp"
+            >
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="INICIAR SESIÓN"
+                android:text="@string/app_name"
                 android:textAlignment="center"
-                android:textSize="34sp"
-                android:textStyle="bold" />
+                android:textSize="35sp"
+                android:textStyle="bold"
+                android:layout_marginTop="25dp"
+                />
 
             <Space
                 android:layout_width="match_parent"
@@ -41,7 +46,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Correo"
+                android:textSize="25sp"
+                android:hint="@string/correo"
                 android:inputType="textPersonName" />
 
             <EditText
@@ -49,33 +55,33 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Contraseña"
-                android:inputType="textPassword" />
+                android:textSize="25sp"
+                android:hint="@string/contrasena"
+                android:inputType="textPassword"
+                android:layout_marginTop="25dp"
+                />
 
             <Button
                 android:id="@+id/btn_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Ingresar"
-                app:cornerRadius="50dp" />
+                android:background="@drawable/round_button_blue"
+                android:text="@string/iniciarSesion"
+                android:textSize="25sp"
+                android:layout_marginTop="70dp"
+                 />
 
             <Button
                 android:id="@+id/btn_register"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#203B8B"
-                android:text="registrarme"
-                android:textSize="12sp"
-                app:cornerRadius="50dp" />
+                android:backgroundTint="@color/salmon"
+                android:text="@string/registrarme"
+                android:textSize="25sp"
+                android:layout_marginTop="70dp"
+           />
 
-            <Button
-                android:id="@+id/btn_anonymous"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="#008989"
-                android:text="Visitante"
-                android:textSize="12sp"
-                app:cornerRadius="50dp" />
+
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

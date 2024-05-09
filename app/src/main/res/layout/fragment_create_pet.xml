@@ -9,13 +9,11 @@
     app:cardCornerRadius="8dp"
     app:contentPadding="16dp">
 
-    <!-- Contenido de la tarjeta -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <!-- Barra de acción personalizada -->
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
@@ -23,10 +21,9 @@
             android:background="?attr/colorPrimary"
             android:elevation="4dp"
             android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-            app:title="Crear Mascota"
+            app:title="@string/aggPet"
             app:titleTextColor="@android:color/white" />
 
-        <!-- Contenido de la actividad -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -35,43 +32,49 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Crear Mascota"
-                android:textSize="18sp"
+                android:text="@string/creacionMascota"
+                android:textSize="28sp"
                 android:textStyle="bold"
-                android:layout_marginBottom="16dp" />
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="20dp"/>
 
             <EditText
                 android:id="@+id/nombre"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Nombre Mascota"
+                android:hint="@string/nombreMascota"
+                android:textSize="28sp"
                 android:inputType="text" />
 
             <EditText
                 android:id="@+id/edad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="20dp"
                 android:ems="10"
-                android:hint="Edad Mascota"
+                android:hint="@string/edadMascota"
+                android:textSize="28sp"
                 android:inputType="text" />
 
             <EditText
                 android:id="@+id/color"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="20dp"
                 android:ems="10"
-                android:hint="Color Mascota"
+                android:textSize="28sp"
+                android:hint="@string/colorMascota"
                 android:inputType="text" />
 
             <Button
                 android:id="@+id/btn_add_CP"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Agregar Mascota"
-                android:layout_marginTop="16dp" />
+                android:text="@string/aggMascota"
+                android:textSize="28sp"
+                android:backgroundTint="@color/salmon"
+                android:layout_marginTop="76dp" />
         </LinearLayout>
 
     </LinearLayout>

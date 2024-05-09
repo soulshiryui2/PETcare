@@ -54,7 +54,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/edad"
+                    android:id="@+id/color"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -76,7 +76,7 @@
             android:id="@+id/btn_editar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#3F6BF1"
+            android:background="@color/verdeGris"
             android:padding="5dp"
             app:srcCompat="@drawable/ic_edit" />
 

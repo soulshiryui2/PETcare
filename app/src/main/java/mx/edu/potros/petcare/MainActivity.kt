@@ -24,17 +24,12 @@ class MainActivity : AppCompatActivity() {
     private lateinit var mRecycler: RecyclerView
     private lateinit var mFirestore: FirebaseFirestore
     private lateinit var query: Query
-
-
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         mAuth = FirebaseAuth.getInstance()
 
         mFirestore = FirebaseFirestore.getInstance()
-
 
         btn_add = findViewById(R.id.btn_add)
         btn_add_frag = findViewById(R.id.btn_add_frag)
@@ -55,7 +50,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this@MainActivity, LoginActivity::class.java))
         }
 
-
         setUpRecyclerView()
 
     }
@@ -74,10 +68,6 @@ class MainActivity : AppCompatActivity() {
         mAdapter.notifyDataSetChanged()
         mRecycler.adapter = mAdapter
     }
-
-
-
-
 
     override fun onStart() {
         super.onStart()

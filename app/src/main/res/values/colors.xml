@@ -2,4 +2,30 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Colores principales -->
+    <color name="colorPrimary">#3F51B5</color> <!-- Azul primario -->
+    <color name="colorPrimaryDark">#303F9F</color> <!-- Azul oscuro -->
+    <color name="colorAccent">#FF4081</color> <!-- Rosa acentuado -->
+
+    <!-- Otros colores -->
+    <color name="green">#4CAF50</color> <!-- Verde -->
+    <color name="yellow">#FFEB3B</color> <!-- Amarillo -->
+    <color name="red">#F44336</color> <!-- Rojo -->
+    <color name="blue">#2196F3</color> <!-- Azul -->
+
+    <color name="moradoBajito">#BB90C8 </color> <!-- Morado bajito -->
+    <color name="rositaBajito">#FFC0CB</color> <!-- Rosita bajito -->
+    <color name="moradoFuerte">#673AB7</color> <!-- Morado fuerte -->
+    <color name="purpuraFuerte">#9C27B0</color> <!-- Púrpura fuerte -->
+
+    <color name="azulVerde">#0C9F95</color>
+    <color name="azulGris">#52BAC3</color>
+    <color name="verdeGris">#4BB08E</color>
+    <color name="gris">#C4CDCA</color>
+    <color name="pink">#F4C7B4</color>
+    <color name="salmon">#FEAA85</color>
+
+    <color name="buttonLoginColor">#1976D2</color> <!-- Azul oscuro -->
+    <color name="buttonRegisterColor">#FFEB3B</color> <!-- Amarillo -->
 </resources>
