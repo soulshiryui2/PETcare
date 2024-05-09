@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "917606091637",
+    "project_id": "petcareapp-22597",
+    "storage_bucket": "petcareapp-22597.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:917606091637:android:4a8d879e49223eb5b5213c",
+        "android_client_info": {
+          "package_name": "mx.edu.potros.petcare"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrs3pvX_y3Jt2BZcNRlTlBdrGvQhXsQzQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
